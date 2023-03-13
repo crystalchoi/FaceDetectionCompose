@@ -32,8 +32,8 @@ fun FaceDetectionApp(modifier: Modifier = Modifier) {
     val context = LocalContext.current
 
     val fileList: Array<String> = context.assets.list("") as Array<String>
-    for (f1 in fileList) {
-//        Log.v(TAG, f1!!)
+    for (f1 in fileList.filter { it.contains(other = ".jpg", ignoreCase = true)}) {
+        Log.v(TAG, f1)
     }
 
 
